@@ -1,0 +1,134 @@
+/* 
+
+write your code here
+
+*/
+
+
+@media print{
+	.tm-sidebar {
+		display:none;
+	}
+	
+	.tm-main-content {
+		margin-left: 0px;	
+	}
+	
+	section::before {
+	content:"";
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 50px solid #31B0D5;
+}
+
+}
+
+
+
+section::before {
+	content:"";
+	width: 0; 
+	height: 0; 
+	border-left: 0px solid transparent;
+	border-right: 130px solid transparent;
+	border-top: 30px solid #31B0D5;
+	
+}
+
+section, #home, .tm-sidebar{
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.87);
+	-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.87);
+	box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.87);
+}
+
+.tm-nav-item:not(:last-of-type) {
+    border-bottom-style: dotted;
+	border-bottom-color: #aaa;
+}
+
+
+
+
+p::first-letter {
+	color:#76cdd7;
+	font-size:30px;
+}
+
+p{
+	text-indent: 20px; /* Відступ першої строки в пікселях */
+}
+
+
+.pad>h2{
+	color: blue;
+}
+
+.pad a{
+	color: #000;
+}
+
+.heading.tm-content-box div.pad ol a::visited {
+    color: #999;
+}
+.pad a:hover {
+	color: blue;
+	text-decoration-style: double;
+}
+
+a.text::after {
+	content: "New";
+	color: red;
+	vertical-align: super;
+	font-size:10px
+}
+
+h2::after{
+	font-style: italic;
+}
+
+div#contact.pad h2.tm-section-title {
+	color: red;
+}
+.carousel-content div.flex-item h2.tm-section-title {
+	color: #dcdcdc;
+}
+
+h2.tm-section-title.tm-section-title-box.tm-box-bg-title {
+	background: #fff;
+	color:red;
+	font: bold;
+}
+h2.tm-section-title.tm-section-title-box.tm-box-bg-title:hover {
+	background: #31B0D5;
+	color:#fff;
+	font: bold;
+}
+
+.thumbnail{
+	border-radius: 50%;
+}
+
+li.box:nth-child(odd) {
+	background:#eee;
+}
+
+.form-control {
+	color:red;
+	border-radius:0;
+	font-size:1em
+	}
+
+.submit-btn:active,.submit-btn:active:focus,.submit-btn:active:hover,.submit-btn:focus,.submit-btn:hover,.submit-btn:visited{
+	background:#31B0D5;
+	
+	border:1px solid #999;
+	color:#fff
+	}
+
+.mandatory-field::after {
+	content: "*";
+	color: red;
+	vertical-align: super;	
+}
