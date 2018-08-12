@@ -1,0 +1,264 @@
+/*
+.class-texte { 
+	font-family: 'Open Sans'; 
+}
+*/
+
+* { 
+	font-family: 'Open Sans'; 
+}
+
+body{
+	margin: 0 auto;
+	background-color: #c8c8c8;
+	padding: 0;
+	max-width: 1024px;
+}
+
+.header {
+	min-width: 900px;
+    height: 473px;
+	background: url(../img/apples.jpg) no-repeat; 
+	background-size: contain;
+}
+
+.top-content-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+}
+
+.top-content-wrapper .name{
+	flex: 45%;
+	text-align: left;
+	color: #fff;
+}
+
+.top-content-wrapper a{
+	color: #fff;
+	padding: 25px;
+  	text-decoration:  none;
+  	font-weight:      bold;
+}
+
+.top-content-wrapper a:hover{
+	background-color: #c8c8c8;
+}
+
+
+.top-content-wrapper .main-nav{
+	flex: 45%;
+	text-align: right;
+
+}
+
+.center-content-wrapper{
+	margin-top: 10%;
+	color: white;
+}
+
+.center-content-wrapper .site-name{
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.center-content-wrapper .show-more{
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+	border: 2px solid white;
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 200px;
+	margin-top: 15%;
+	cursor: pointer;
+}
+
+.center-content-wrapper .show-more:hover{
+	border: 2px solid #343638;
+	color: #9E9E9E;
+	cursor: pointer;
+}
+
+.first-section-container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	background-color: #fff;
+}
+
+.first-section-container .left, .first-section-container .right{
+	flex: 25%;
+	padding: 100px;
+}
+
+.second-section-container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	background-color: #e8e8e8;
+	text-align: center;
+}
+
+.second-section-container .big-left, .second-section-container .big-right{
+	flex: 55%;
+	height: 250px;
+	margin: 0 20px 20px 20px;
+	text-align: right;
+	padding: 10px;
+}
+
+.second-section-container .text{
+	flex: 20%;
+	padding: 20px;
+}
+
+.second-section-container .big-left{
+	background: url(../img/sample.jpg) no-repeat; 
+	background-size: cover;
+}
+
+.second-section-container .big-right{
+	background: url(../img/sample3.jpg) no-repeat; 
+	background-size: cover;
+}
+
+.second-section-container .like{
+	border: 2px solid white;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 5px 10px;
+	color: #fff;;
+	width: 50px;
+	float: right;	
+	text-align: center;
+}
+
+
+.second-section-container .like:after{
+	content: "\2764";
+	margin-left: 3px;
+}
+
+/*
+.like {
+  content: "\2764";
+  position: absolute;
+  color: green;
+}
+*/
+
+.second-section-container .section-title{
+	flex: 100%;
+	padding: 100px 0;
+}
+
+.subscribe-container{
+	flex: 100%;
+	background-color: #fff;
+	padding: 50px 0;	
+	margin: 20px;
+	float: right;
+}
+
+.subscribe-container .email{
+	height: 32px;
+	background-color: #F3F3F3;
+	border: 1px solid black;
+	width: 60%;
+}
+
+.subscribe-container .subscribe{
+	line-height: 32px;
+    background-color: #343638;
+    color: white;
+    padding: 9px;
+    position: relative;
+    right: 5px;
+}
+
+.subscribe:hover{
+    background-color: #B7C8D9;
+}
+
+.subscribe span:hover{
+    background-color: #B7C8D9;
+}
+
+
+.footer{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	background-color: #fff;
+	padding: 70px 30px 0 30px;	
+}
+
+.footer .about{
+	flex: 15%;
+}
+
+.footer .bottom-nav{
+	flex: 100%;
+	margin: 20px 0;
+	border-top: 1px solid #B7C8D9;
+	padding: 20px 0;
+}
+
+.footer .about .title{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer .bottom-nav .copyright{
+	float: left;
+}
+
+.footer .bottom-nav .navigation{
+	float: right;
+}
+/*
+.bottom-nav .navigation .link a{
+	color:		#9E9E9E;
+ */
+
+.time-ago{
+	color: #E8E8E8;
+}
+
+.bottom-nav .navigation> a{
+  	text-decoration:  none;
+  	font-weight:      bold;
+	color: #000;
+	padding: 10px;
+}
+
+.bottom-nav .navigation a:hover{
+	color: #343638;
+  	text-decoration:  none;
+  	font-weight:      bold;
+}
+
+.bottom-nav a:visited{
+	color:		#A4A4A4;
+}
+
+.about .email{
+	height: 24px;
+	background-color: #F3F3F3;
+	border: 1px solid black;
+	width: 60%;
+}
+
+.about .subscribe{
+	line-height: 24px;
+    background-color: #000;
+    color: white;
+    padding: 5px;
+    position: relative;
+    right: 5px;
+}
+
+.description{
+    color: #9E9E9E;
+}
