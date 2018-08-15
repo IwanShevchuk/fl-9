@@ -1,0 +1,314 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+:root {
+  --bg-color--dark: #0a1223;
+  --bg-color--light: #fff;
+  --link: #5d5d5d;
+  --link--active: #54597d;
+  --link--hover: #54597d;
+  --article-title: #ddd;
+  --article-title--dark: #000;
+  --thumbnail--description: #5d5d5d;
+
+  /* These styles are needed only for media query max-width: 575px */
+
+  /* The 'Up' button (circle button at right bottom corner) */
+  --btn-color: #fff;
+  --btn-bg-color: #5ebcff;
+
+  --navigation-border-bottom: #ddd;
+  --thumbnail-title: #484747;
+}
+
+/* Your styles go here */
+
+/*
+a, a:link {
+  color: var(--link);
+}
+*/
+a {
+  color: var(--link);
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+a:active {
+  color: var(--link--active);
+}
+
+.dark-side{
+  background: transparent url("../assets/dark-side.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.dark-side2{
+  background: transparent url("../assets/earth-tides.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.dark-side3{
+  background: transparent url("../assets/drifting-moon.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.dark-side4{
+  background: transparent url("../assets/less-weight-on-the-moon.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.dark-side5{
+  background: transparent url("../assets/12-americans.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+.dark-side6{
+  background: transparent url("../assets/no-atmosphere.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+.dark-side7{
+  background: transparent url("../assets/moon-quakes.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+.dark-side8{
+  background: transparent url("../assets/spacecraft.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.dark-side9{
+  background: transparent url("../assets/moon-station.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+.dark-side10{
+  background: transparent url("../assets/nuclear-bomb.png");
+  background-position: -50px;
+  display: block;
+  width: 100px;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+body{
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: var(--bg-color--dark);
+  color: var(--article-title);
+}
+
+nav{
+  float: right;
+}
+
+h1{
+  text-align: center;
+  padding: 20px 20px;
+
+}
+
+.title {
+/*	color: -webkit-linear-gradient(#3ff , #939) ;
+*/
+  background: -webkit-linear-gradient(0,  #eee,  var(--thumbnail--description) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.description{
+	color:  var(--thumbnail--description);
+}
+
+.fact{
+  display: flex;
+}
+
+.main{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.dark-side{
+  flex-wrap: nowrap;
+  width: 50%;
+  background: transparent url(../assets/dark-side.png);
+  background-position: -50px;
+  display: block;
+  background-size: cover;
+  height: 100px;
+  background-repeat: no-repeat;
+  margin: 35px;
+}
+
+.description-container{
+  flex-wrap: nowrap;
+  width: 50%;
+}
+
+.description-container .title{
+  display: block;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.description-container .description{
+  font-size: 16px;
+}
+
+.image{
+  flex-wrap: nowrap;
+  width: 30%;
+}
+
+.fact:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 991px) {
+
+ body .main .fact{
+    display: block;
+  }
+
+  .description-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .image{
+    margin: 0 auto;
+  }
+
+  nav{
+    float: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px){
+
+  body{
+    background-color: var(--bg-color--light);
+  }
+
+  h1{
+    display: block;
+    text-align: center;
+	    padding-bottom: 100px;
+  }
+
+  nav{
+    width: 100%;
+    text-align: left;
+  }
+
+  nav a{
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+  }
+
+  .btn-container {
+    /*
+    position: absolute;
+    border-radius: 50%;
+    background-color: blue;
+    height: 90px;
+      width: 90px;
+      top: 945px;
+      left: 380px;
+    box-shadow: 4px 4px 15px #BCBCBC;
+    z-index: 4;
+    text-align: center;
+
+        position: fixed;
+    */
+
+    border-radius: 50%;
+    background-color: blue;
+    height: 90px;
+      width: 90px;
+
+      float: right;
+      right: 18.5%;
+      left: 77.25%;
+
+    box-shadow: 4px 4px 15px #BCBCBC;
+    z-index: 4;
+    text-align: center;
+  }
+
+  .btn-container i a{
+    /*
+    color: #999;
+    text-align: center;
+    top: 45px;
+    font-size: 22px
+    float: right;
+    text-decoration: none;
+*/
+
+    border: none;
+    color: white;
+    padding: 20px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+ }
+
+
+
