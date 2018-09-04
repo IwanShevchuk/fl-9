@@ -1,4 +1,4 @@
-var rootNode = document.getElementById("root");
+var rootNode = document.getElementById('root');
 
 
 var dragSrcEl = null;
@@ -20,11 +20,11 @@ function handleDrop(e) {
     e.stopPropagation();
   }
 
-  if (dragSrcEl != this) {
+  if (dragSrcEl !== this) {
     this.parentNode.removeChild(dragSrcEl);
-    var dropHTML = e.dataTransfer.getData('text/html');
+    let dropHTML = e.dataTransfer.getData('text/html');
     this.insertAdjacentHTML('beforebegin',dropHTML);
-    var dropElem = this.previousSibling;
+    let dropElem = this.previousSibling;
     addDragHandlers(dropElem);
     
   }
@@ -37,44 +37,46 @@ function addDragHandlers(elem) {
   elem.addEventListener('drop', handleDrop, false);
 }
 
-
+const zero=0;
+const max_item=10;
 var count = 1;
-var lastItemIndex = 0;
+var lastItemIndex = zero;
 
 disableInput(false);
 
 
 function removeItem(index){
-    let elem = document.getElementById("item" + index);
+    let elem = document.getElementById('item' + index);
     rootNode.removeChild(elem);
     count --;
-    if(count <=10){
+    if(count <=max_item){
         disableInput(false);
     }
 }
 
 function addItem(){
-    let itemInput = document.getElementById("addItemInput");
+  
+    let itemInput = document.getElementById('addItemInput');
 
     let newItem = itemInput.value;
-    itemInput.value = ""; 
+    itemInput.value = ''; 
 
-    var isDone = document.createElement("input");
-    isDone.setAttribute("type", "checkbox");
-    isDone.setAttribute("onclick", "isDone("+ lastItemIndex + ")");
+    let isDone = document.createElement('input');
+    isDone.setAttribute('type', 'checkbox');
+    isDone.setAttribute('onclick', 'isDone('+ lastItemIndex + ')');
 
-    var content = document.createElement('span')
+    let content = document.createElement('span')
     content.innerHTML = newItem;
 
-    var deleteIcon = document.createElement('i')
-    deleteIcon.innerHTML = "delete";
-    deleteIcon.className = "material-icons"
-    deleteIcon.setAttribute("onclick", "removeItem("+ lastItemIndex + ")");
+    let deleteIcon = document.createElement('i')
+    deleteIcon.innerHTML = 'delete';
+    deleteIcon.className = 'material-icons'
+    deleteIcon.setAttribute('onclick', 'removeItem('+ lastItemIndex + ')');
 
-    var itemDiv = document.createElement("div");
-    itemDiv.setAttribute("draggable", true);
-    itemDiv.setAttribute("class", "dragable-item");
-    itemDiv.id = "item" + lastItemIndex;
+    let itemDiv = document.createElement('div');
+    itemDiv.setAttribute('draggable', true);
+    itemDiv.setAttribute('class', 'dragable-item');
+    itemDiv.id = 'item' + lastItemIndex;
 
     lastItemIndex ++;
     count ++;
@@ -85,10 +87,10 @@ function addItem(){
 
     rootNode.appendChild(itemDiv);
 
-    var drItems = document.querySelectorAll('#root .dragable-item');
+    let drItems = document.querySelectorAll('#root .dragable-item');
     [].forEach.call(drItems, addDragHandlers);
 
-    if(count > 10){
+    if(count > max_item){
         disableInput(true);
     }
 
@@ -96,8 +98,8 @@ function addItem(){
 }
 
 function isDone(index){
-    let item = document.getElementById("item" + index);
-    let checkbox = item.getElementsByTagName("input")[0];
+    let item = document.getElementById('item' + index);
+    let checkbox = item.getElementsByTagName('input')[zero];
 
     if(!checkbox.checked){
         checkbox.checked = true;
@@ -106,18 +108,18 @@ function isDone(index){
 
 
 function disableInput(shouldInputBeDisabled){
-    var input = document.getElementById("addItemInput");
-    var addBox = document.getElementById("addBox");
-    var confirmation = document.getElementById("confirmation");
+    let input = document.getElementById('addItemInput');
+    let addBox = document.getElementById('addBox');
+    let confirmation = document.getElementById('confirmation');
     if(shouldInputBeDisabled){
        input.disabled = true;
-       addBox.removeAttribute("onclick");
-       confirmation.innerHTML = "Maximum item per list are created";
+       addBox.removeAttribute('onclick');
+       confirmation.innerHTML = 'Maximum item per list are created';
     } else {
        input.disabled = false;
-       confirmation.innerHTML = "";
-       if(!addBox.getAttribute("onclick")){
-            addBox.setAttribute("onclick","addItem()");
+       confirmation.innerHTML = '';
+       if(!addBox.getAttribute('onclick')){
+            addBox.setAttribute('onclick','addItem()');
        }
     }
 }
