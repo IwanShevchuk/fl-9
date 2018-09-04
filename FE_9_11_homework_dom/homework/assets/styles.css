@@ -1,0 +1,229 @@
+/* Your styles goes here 
+http://visualslideshow.com/design-blog/bootstrap-input-box-502.html
+*/
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 70%;
+    border:1px solid;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+@media (min-width: 576px)
+.container {
+    max-width: 540px;
+}
+
+
+
+.input_box{
+    float: left;
+    width: 80%;
+}
+.list-group{
+    float: left;
+    width: 80%;
+	
+}
+.btn2 {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+	background-color: white;
+    border: 0px solid transparent; 
+	
+    padding: .05rem .05rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-radius: .25rem;
+    transition: all .15s ease-in-out;
+}
+.btn2:hover {
+    background-color: DodgerBlue;
+}
+
+
+/* Style buttons */
+.btn {
+    background-color: white; /* Blue background  background-color: RoyalBlue;  DodgerBlue ; */
+    border: none; /* Remove borders */
+    color: black; /* White text  white */
+    padding: 2px 2px; /* Some padding */
+    font-size: 12px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+
+
+.float-right {
+    float: right!important;
+}
+/* непотрібно  .btn-group-sm>.btn, .btn-sm   .list-group  */
+.btn-group-sm>.btn, .btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+
+
+
+
+
+.list-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+
+
+/*
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box img {
+    width: 100px;
+    height: 100px;
+  }
+
+
+ .box.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  */
+
+
+
+
+.box {
+    width: 20%;
+    min-height:80vh;
+    margin:auto;
+    border:1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* not really needed with auto margin on img*/
+ }
+.box img {
+    display: block;
+    width: 50%;
+    min-width:50px;
+    max-width: 50px; /*actual image width*/
+    height: auto; /* maintain aspect ratio*/
+    margin: auto; /*optional centering of image*/
+ }
+
+
+
+
+
+
+  /* Customize the label (the container) */
+.container1 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border:3px solid;
+    border-radius: .2rem;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container1:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background   #2196F3; */
+  .container1 input:checked ~ .checkmark {
+    background-color: #222;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container1 input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container1 .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  } 
