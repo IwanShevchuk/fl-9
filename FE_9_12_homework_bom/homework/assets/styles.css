@@ -1,0 +1,82 @@
+/* Your styles go here */
+
+.hidden{
+    display: none;
+}
+
+body{
+    text-align: center;
+}
+
+.button{
+    padding: 15px;
+    background-color: #c8c8c8;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.button:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.input{
+    height: 20px;
+    width: 300px;
+    margin: 8px;
+    border-radius: 5px;
+}
+
+.button-container{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.cancel{
+    display: block;
+    float: left;
+}
+
+.save{
+    display: block;
+    float: right;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checker {
+    background-image: url(../assets/img/todo-s.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.checkbox:checked + .checker {
+    background-image: url(../assets/img/done-s.png);
+}
+
+.delete{
+    background-image: url(../assets/img/remove-s.jpg);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+table{
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.todo-cell{
+    width: 300px;
+}
+
+tr.done{
+    background-color: #c8c8c8;
+}
